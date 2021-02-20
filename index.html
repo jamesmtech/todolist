@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script defer src="main.js"></script>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,21 @@
 </head>
 
 <body>
-    <h1 class="title">Stuff I need to do</h1>
+    <h1 class="title">To Do List</h1>
 
     <div class="all-tasks">
       <h2 class="task-list-title">My lists</h2>
-      <ul class="task-list">
-        <li class="list-name active-list">Youtube</li>
+      <ul class="task-list" data-lists>
+        <!-- <li class="list-name active-list">Youtube</li>
         <li class="list-name">Work</li>
-        <li class="list-name">Grocery</li>
+        <li class="list-name">Grocery</li> -->
       </ul>
 
-      <form action="">
+      <form action="" data-new-list-form>
         <input 
           type="text"
           class="new list"
+          data-new-list-input
           placeholder="new list name"
           aria-label="new list name"
         />
@@ -88,7 +90,7 @@
 
         <div class="delete-stuff">
           <button class="btn delete">Clear completed tasks</button>
-          <button class="btn delete">Delete list</button>
+          <button class="btn delete" data-delete-list-button>Delete list</button>
         </div>
       </div>
     </div>
